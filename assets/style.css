@@ -7,7 +7,6 @@ body {
   font-weight: 300;
   line-height: 1.4;
   color: #666;
-  min-width: 960px;
 }
 
 h1 {
@@ -114,6 +113,7 @@ div.header h1 {
 #recently-updated h1 a {
   font-weight: normal;
   font-size: 1rem;
+  max-width: 100%;
 }
 
 #recently-updated-repos {
