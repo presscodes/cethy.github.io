@@ -1,28 +1,29 @@
 html {
-  background: url("bg.png") repeat;
+  background: #eceff1;
 }
 
 body {
-  font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 1rem Reoboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
   line-height: 1.4;
   color: #666;
   min-width: 960px;
 }
 
 h1 {
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: 900;
+  font-size: 1.3rem;
   color: #333;
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 20px;
-  color: #0084b4;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #263238;
 }
 
 a:link, a:visited {
-  color: #0084b4;
+  color: #ff6f00;
   text-decoration: none;
 }
 
@@ -31,27 +32,28 @@ a:hover {
 }
 
 strong {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 #wrapper {
   position: relative;
-  width: 960px;
+  width: 100%;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 1rem 0;
 }
 
 #main {
-  height: 330px;
+  height: auto;
+  padding-bottom: 3rem;
   text-align: center;
 }
 
 #main, div.header, li.repo {
   background: white;
   background: rgba(255, 255, 255, 0.7);
-  -moz-box-shadow:    0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-  box-shadow:         0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   margin-bottom: 20px;
 }
 
@@ -59,17 +61,13 @@ strong {
   margin: 30px 0;
 }
 
-#main h1 img {
-	border-radius: 5px;
-}
-
 #main h1, #main p {
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 #main p {
-  font-size: 11px;
+  font-size: .8rem;
   line-height: 2;
 }
 
@@ -86,21 +84,21 @@ strong {
 }
 
 div.header {
-  height: 130px;
+  height: 12rem;
 }
 
 div.header h1, div.header p {
-  margin: 10px 15px 0;
+  margin: 1rem 1rem 0;
 }
 
 div.header h1 {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 #num-repos, #num-members, #num-source-repos {
-  font-size: 14px;
-  font-weight: bold;
-  color: #0084b4;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ff8f00;
   line-height: 15px;
 }
 
@@ -115,11 +113,11 @@ div.header h1 {
 
 #recently-updated h1 a {
   font-weight: normal;
-  font-size: 11px;
+  font-size: 1rem;
 }
 
 #recently-updated-repos {
-  margin-left: 15px;
+  margin-left: 1rem;
 }
 
 #recently-updated-repos li {
@@ -132,12 +130,12 @@ div.header h1 {
 }
 
 #recently-updated-repos li span {
-  font-size: 11px;
+  font-size: .8rem;
 }
 
 #recently-updated-repos li span.name {
-  padding: 0 6px 0 0;
-  font-size: 13px;
+  padding: 0 .5rem 0 0;
+  font-size: .8rem;
 }
 
 #recently-updated-repos li span.time a,
@@ -147,7 +145,8 @@ div.header h1 {
 }
 
 li.repo {
-  height: 180px;
+  height: 12rem;
+  position: relative;
 }
 
 li.repo > a {
@@ -175,10 +174,17 @@ li.repo h2 {
 }
 
 li.repo h3 {
-  font-size: 11px;
-  margin-top: 2px;
-  margin-bottom: 15px;
-  color: #999;
+  font-size: 9px;
+  color: #fff;
+  position: absolute;
+  top:-6px;
+  right: -12px;
+  z-index: 999;
+  font-weight: 700;
+}
+
+li.repo.php h3 {
+  color: #333;
 }
 
 .repo:after {
@@ -188,14 +194,14 @@ li.repo h3 {
   top: 0;
   width: 0;
   height: 0;
-  border-bottom: 50px solid transparent;
+  border-bottom: 35px solid transparent;
   border-left: 50px solid transparent;
-  border-right: 50px solid #0080b0;
+  border-right: 100px solid #0080b0;
   pointer-events: none;
 }
 
 .repo.javascript:after {
-  border-right-color: #2196f3;
+  border-right-color: #4caf50;
 }
 
 .repo.css:after {
