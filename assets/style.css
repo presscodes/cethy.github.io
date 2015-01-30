@@ -195,23 +195,15 @@ li.repo h3 {
 }
 
 .repo.javascript:after {
-  border-right-color: #333;
+  border-right-color: #2196f3;
 }
 
-.repo.scala:after {
-  border-right-color: #7ac9de;
+.repo.css:after {
+  border-right-color: #f44336;
 }
 
-.repo.ruby:after {
-  border-right-color: #cc1100;
-}
-
-.repo.java:after {
-  border-right-color: #cc8300;
-}
-
-.repo.python:after {
-  border-right-color: #6aad2d;
+.repo.php:after {
+  border-right-color: #ffc107;
 }
 
 [ng-cloak] {
